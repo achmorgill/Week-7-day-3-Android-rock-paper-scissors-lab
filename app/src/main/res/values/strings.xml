@@ -2,4 +2,7 @@
     <string name="app_name">Rock Paper Scissors</string>
     <string name="choose_string_text">CHOOSE</string>
     <string name="result_label">Game Results</string>
+    <string name="welcome_message">WELCOME GAMERS</string>
+    <string name="game_rules">The player selected one of the 3 button</string>
+    <string name="game_button">GO TO GAME</string>
 </resources>
