@@ -11,17 +11,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Game game;
+    private TextView scoreView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        scoreView = (TextView) findViewById(R.id.score_view);
+        this.game = new Game();
+        scoreView.setText(this.game.getScore().toString());
     }
 
     public void onButtonClick(View button){
-
-        game = new Game(button.getTag().toString());
+        this.game.setChoice(button.getTag().toString());
         button.getId();
         String result = game.getResults();
         Intent intent = new Intent(this,ResultActivity.class);
